@@ -22,9 +22,13 @@
     	
     	<!-- Style sheets-->
     	<link rel="stylesheet" href="css/reset.css" />
+    	<link rel="stylesheet" href="css/dropdown/dropdown.css" />
+    	<link rel="stylesheet" href="css/card.css" />
     	<link rel="stylesheet" href="css/style.css" />
     	<link rel="stylesheet" href="css/main.css" />
-    	<link rel="stylesheet" href="css/card.css" />
+    	
+    	
+    	
     
     </head>
     
@@ -35,28 +39,28 @@
     	<header id="header">
     		<nav>
     			<ul>
-    				<li><a href="/panda">PANDA</a></li>
-    				<li><a href="">Nav Link 2</a></li>
-    				<li><a href="">Nav Link 3</a></li>
+    				<!--<li><a href="/panda">PANDA</a></li>-->
+    				<li>
+        				<select id="cd-dropdown" class="cd-select">
+                            <option value="-1" selected>Choose an animal</option>
+                            <option value="1" class="icon-monkey">Monkey</option>
+                            <option value="2" class="icon-bear">Bear</option>
+                            <option value="3" class="icon-squirrel">Squirrel</option>
+                            <option value="4" class="icon-elephant">Elephant</option>
+                        </select>
+    				</li>
     			</ul>
-    		
     		</nav>
-    		
-    		
-    		<select id="cd-dropdown" class="cd-select">
-                <option value="-1" selected>Choose an animal</option>
-                <option value="1" class="icon-monkey">Monkey</option>
-                <option value="2" class="icon-bear">Bear</option>
-                <option value="3" class="icon-squirrel">Squirrel</option>
-                <option value="4" class="icon-elephant">Elephant</option>
-            </select>
-    	
     	</header>
+    	
     	<div id="dropshadow"></div>
     	
     	<content id="container" class="clearfix">
     		
     		<section id="left">
+    		
+    		
+            
     		    
     		    <div class="card">
         		    <p class="card-title"> Header</p>   
@@ -84,12 +88,12 @@
     
 
     
-    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write("<script src='js/libs/jquery-1.11.0.min.js'>\x3C/script>")</script>
     
+    <!-- jquery -->
+    <script src="js/libs/jquery-1.11.0.min.js"></script>  
+    <script src="js/libs/jquery.dropdown.js"></script>  
+    <script src="js/libs/modernizr-2.7.1.dev.js"></script> 
     <!-- this is where we put our custom functions -->
-    <!-- don't forget to concatenate and minify if needed -->
     <script src="js/functions.js"></script>  
 </body>
 </html>

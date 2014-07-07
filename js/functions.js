@@ -15,6 +15,9 @@
 	$(document).ready(function (){
 	
 		// your functions go here
+		
+		// init dropdown
+		$( '#cd-dropdown' ).dropdown();
 	
 	});
 	
@@ -32,3 +35,17 @@
 	*/
 
 })(window.jQuery);
+
+
+/* Creates two eqaul columns. */
+function init2col() {
+    $("#left").width('50%');
+    $("#right").width('50%');
+}
+
+
+/* Expands left column to full size. */
+function expandLeft() {
+    $("#left").width('100%');
+    $("#right").width('0%');
+}
