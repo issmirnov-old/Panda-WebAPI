@@ -9,6 +9,9 @@
     	<meta name="description" content="" />
     	<meta name="Copyright" content="" />
     	
+    	<!-- fonts -->
+    	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    	
     	<!--  Mobile Viewport
     	http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
     	device-width : Occupy full width of the screen in its current orientation
@@ -42,27 +45,87 @@
     				<!--<li><a href="/panda">PANDA</a></li>-->
     				<li>
         				<select id="cd-dropdown" class="cd-select"> <!-- source: http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/-->
-                            <option value="-1" selected>Choose an animal</option>
-                            <option value="1" class="icon-monkey">Monkey</option>
-                            <option value="2" class="icon-bear">Bear</option>
-                            <option value="3" class="icon-squirrel">Squirrel</option>
-                            <option value="4" class="icon-elephant">Elephant</option>
+                            <option value="-1" selected>Select a Category</option>
+                            <option value="1" class="icon-monkey">Script</option>
+                            <option value="2" class="icon-bear">Service</option>
+                            <option value="3" class="icon-squirrel">Status</option>
                         </select>
     				</li>
     			</ul>
     		</nav>
     	</header>
     	
-    	<div id="dropshadow"></div>
+    	<!--<div id="dropshadow"></div>-->
     	
     	<content id="container" class="clearfix">
     		
     		<section id="left">
-    		    <div class="card">
-        		    <p class="card-title">Calibre</p>   
-        		    <p> Details are here</p> 
-        		    <button id="calibre-button" type="button" class="paper-button" onclick="getData1Status()">button</button>
-    		    </div>
+    		
+    		    <div id="status">
+
+        		    <div class="card">
+            		    <p class="card-title">Data1</p>   
+            		    <p>This is a 4tb raid0 array mounted on /storage/data1.</p> 
+            		    <button type="button" class="paper-button bottom-right" onclick="getData1Status()">Status</button>
+        		    </div>
+        		    
+        		     <div class="card">
+            		    <p class="card-title">Md0</p>   
+            		    <p>Get details of software raid array on /dev/md0</p> 
+            		    <button type="button" class="paper-button bottom-right" onclick="getMd0Status()">Status</button>
+        		    </div>
+        		
+                </div><!-- end status-->
+                
+                
+                <div id="service">
+
+        		    <div class="card">
+            		    <p class="card-title">Calibre</p>   
+            		    <p>All calibre libraries</p> 
+            		    <button type="button" class="paper-button bottom-right" onclick="getCalibreStatus()">Status</button>
+            		    <button type="button" class="paper-button bottom-left" onclick="postCalibreStart()">Start</button>
+            		    <button type="button" class="paper-button bottom-left-mid" onclick="postCalibreStop()">Stop</button>
+            		    <button type="button" class="paper-button bottom-right-mid" onclick="postCalibreRestart()">Restart</button>
+        		    </div>
+        		    
+        		     <div class="card">
+            		    <p class="card-title">Plex</p>   
+            		    <p>Plex info here (include link?)</p> 
+            		    <button type="button" class="paper-button bottom-right" onclick="">Status</button>
+        		    </div>
+        		
+                </div><!-- end service-->
+                
+                
+                
+                <div id="script">
+
+        		    <div class="card">
+            		    <p class="card-title">Dokuwiki</p>   
+            		    <p>info and link here</p> 
+                        <button type="button" class="paper-button bottom-right" onclick="getCalibreStatus()">Status</button>
+            		    <button type="button" class="paper-button bottom-left" onclick="postCalibreStart()">Add</button>
+            		    <button type="button" class="paper-button bottom-left-mid" onclick="postCalibreStop()">Commit</button>
+            		    <button type="button" class="paper-button bottom-right-mid" onclick="postCalibreRestart()">Push</button>
+            		     <button type="button" class="paper-button bottom-mid" onclick="postCalibreRestart()">Pull</button>
+        		    </div>
+        		    
+        		     <div class="card">
+            		    <p class="card-title">Backup /var/www</p>   
+            		    <p>info and last backup time here</p> 
+            		    <button type="button" class="paper-button bottom-right" onclick="">Backup!</button>
+        		    </div>
+        		    
+        		    <div class="card">
+            		    <p class="card-title">Backup System</p>   
+            		    <p>info and last backup time here</p> 
+            		    <button type="button" class="paper-button bottom-right" onclick="">Backup!</button>
+        		    </div>
+        		
+                </div><!-- end script-->
+    		
+    		
     		    
     		</section>
     		

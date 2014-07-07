@@ -24,6 +24,12 @@ html {
     background: #e1e1e1; /* also e5 is nice*/
 	min-height: 100%;
 	margin: auto;
+	height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
 }
 
 #header {
@@ -32,6 +38,7 @@ html {
     height: 90px;
     display: block;
     padding: 10px 10px 10px 10px;
+    box-shadow: 0px 3px rgba( 0, 0, 0, 0.1 );
     
 }
 
@@ -55,13 +62,11 @@ nav ul li a {
 
 #left {
     float: left;
-    width: 50%;
 }
 
 
 #right {
     float: left;
-    width: 50%;
     overflow: hidden;
 }
 
@@ -100,12 +105,37 @@ nav ul li a {
     /* shadows */
     box-shadow: 1px 1px 3px #888888;
     font-size: 14px;
+    padding: 5px;
     
 }
 
-#calibre-button {
-    bottom: 3px;
-    right: 3px; 
+.bottom-right {
+    bottom: 10px;
+    right: 10px; 
+    position: absolute;
+} 
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px; 
+    position: absolute;
+} 
+
+.bottom-right-mid {
+    bottom: 10px;
+    right: 100px; 
+    position: absolute;
+} 
+
+.bottom-left-mid {
+    bottom: 10px;
+    left: 100px; 
+    position: absolute;
+} 
+
+.bottom-mid {
+    bottom: 10px;
+    left: 200px; 
     position: absolute;
 } 
 

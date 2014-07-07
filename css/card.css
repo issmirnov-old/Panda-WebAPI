@@ -30,11 +30,14 @@ div.card {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	margin: 0 auto;
+	padding-bottom: 15px;
+	margin-bottom: 50px; /*spacing betrween cards*/
 	
 	}
 	div.card p {
 		margin: 0 0 15px 0;
 		padding: 15px;
+		font-size: 14px;
 	}
 	div.card p.card-title {
 	    margin: 0 0 0 0;
