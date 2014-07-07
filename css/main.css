@@ -76,7 +76,9 @@ nav ul li a {
 }
 
 /* has results of ajax call.*/
-#info-card {
+#info-card .card-title {
+    /*background: rgba(22, 174, 105, 0.89);*/
+    background: rgba(54, 185, 125, 0.89);
 }
 
 
@@ -85,4 +87,25 @@ nav ul li a {
 
 }
 
+
+/* floating paper button*/
+.paper-button {
+    background: #dfdfdf;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 3px;     /*  rounded edges*/
+    
+    /* shadows */
+    box-shadow: 1px 1px 3px #888888;
+    font-size: 14px;
+    
+}
+
+#calibre-button {
+    bottom: 3px;
+    right: 3px; 
+    position: absolute;
+} 
 

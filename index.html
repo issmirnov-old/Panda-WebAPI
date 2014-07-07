@@ -41,7 +41,7 @@
     			<ul>
     				<!--<li><a href="/panda">PANDA</a></li>-->
     				<li>
-        				<select id="cd-dropdown" class="cd-select">
+        				<select id="cd-dropdown" class="cd-select"> <!-- source: http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/-->
                             <option value="-1" selected>Choose an animal</option>
                             <option value="1" class="icon-monkey">Monkey</option>
                             <option value="2" class="icon-bear">Bear</option>
@@ -58,22 +58,18 @@
     	<content id="container" class="clearfix">
     		
     		<section id="left">
-    		
-    		
-            
-    		    
     		    <div class="card">
-        		    <p class="card-title"> Header</p>   
+        		    <p class="card-title">Calibre</p>   
         		    <p> Details are here</p> 
-        		    <p class="url"><a href="http://www.google.com/landing/now/">See the page</a></p>
+        		    <button id="calibre-button" type="button" class="paper-button" onclick="getData1Status()">button</button>
     		    </div>
     		    
     		</section>
     		
     		<section id="right">
-    		    <div class="card">
+    		    <div class="card" id="info-card">
     		        <p class="card-title">AJAX Response</p>   
-        		    <p> Details are here</p> 
+        		    <p id="ajax-detailed-results">Results go here.</p> 
                 </div>
     		</section>
     	

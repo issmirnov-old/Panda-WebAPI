@@ -49,3 +49,60 @@ function expandLeft() {
     $("#left").width('100%');
     $("#right").width('0%');
 }
+
+function calibre1() {
+    console.log("calibre1");
+}
+
+
+// API work
+var API_BASE_URL = 'http://puma/polymer/api';
+
+// Returns status of data1
+function getData1Status() {
+    var data1StatusUrl = API_BASE_URL + '/status/data1'; //.json?
+    $.ajax({url:data1StatusUrl, type:"GET", dataType:'json', success:function(result){
+        //console.log(result);
+        var parsed = JSON.parse(result);
+        var html = '';
+        for(var i = 0; i < parsed.length; i++)
+        {
+            html += parsed[i] + '<br>';
+        }
+        $("#ajax-detailed-results").html(html);
+    }});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
