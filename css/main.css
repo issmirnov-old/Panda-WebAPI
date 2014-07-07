@@ -1,0 +1,78 @@
+/*! Custom styles for Panda */
+
+html {
+    background: #e1e1e1; /* also e5 is nice*/
+	min-height: 100%;
+	margin: auto;
+}
+
+#header {
+    background: #03a9f4;
+    color: white;
+    height: 64px;
+    display: block;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+
+    padding: 10 10 10 10;
+    
+        padding-top: 30px;
+}
+
+#left {
+    float: left;
+    width: 50%;
+}
+
+
+#right {
+    float: left;
+    width: 50%;
+}
+
+
+#dropshadow {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+}
+
+/* has results of ajax call.*/
+#info-card {
+}
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+

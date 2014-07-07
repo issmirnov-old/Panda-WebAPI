@@ -1,0 +1,95 @@
+<!doctype html>
+    
+    <head>
+    
+    	<meta charset="utf-8">
+    	<title>Panda</title>
+    	<meta name="title" content="Panda" />
+    	<meta name="author" content="Ivan Smirnov" />
+    	<meta name="description" content="" />
+    	<meta name="Copyright" content="" />
+    	
+    	<!--  Mobile Viewport
+    	http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
+    	device-width : Occupy full width of the screen in its current orientation
+    	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+    	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width (wrong for most sites)
+    	-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	
+    	<!-- Use Iconifyer to generate all the favicons and touch icons you need: http://iconifier.net -->
+    	<link rel="shortcut icon" href="favicon.ico" />
+    	
+    	<!-- Style sheets-->
+    	<link rel="stylesheet" href="css/reset.css" />
+    	<link rel="stylesheet" href="css/style.css" />
+    	<link rel="stylesheet" href="css/main.css" />
+    	<link rel="stylesheet" href="css/card.css" />
+    
+    </head>
+    
+    <body>
+    
+
+    
+    	<header id="header">
+    		<nav>
+    			<ul>
+    				<li><a href="/panda">PANDA</a></li>
+    				<li><a href="">Nav Link 2</a></li>
+    				<li><a href="">Nav Link 3</a></li>
+    			</ul>
+    		
+    		</nav>
+    		
+    		
+    		<select id="cd-dropdown" class="cd-select">
+                <option value="-1" selected>Choose an animal</option>
+                <option value="1" class="icon-monkey">Monkey</option>
+                <option value="2" class="icon-bear">Bear</option>
+                <option value="3" class="icon-squirrel">Squirrel</option>
+                <option value="4" class="icon-elephant">Elephant</option>
+            </select>
+    	
+    	</header>
+    	<div id="dropshadow"></div>
+    	
+    	<content id="container" class="clearfix">
+    		
+    		<section id="left">
+    		    
+    		    <div class="card">
+        		    <p class="card-title"> Header</p>   
+        		    <p> Details are here</p> 
+        		    <p class="url"><a href="http://www.google.com/landing/now/">See the page</a></p>
+    		    </div>
+    		    
+    		</section>
+    		
+    		<section id="right">
+    		    <div class="card">
+    		        <p class="card-title">AJAX Response</p>   
+        		    <p> Details are here</p> 
+                </div>
+    		</section>
+    	
+    	</content>
+
+    	
+    	<footer>
+    		
+    		<!--<p><small>&copy; Copyright Your Name Here 2013. All Rights Reserved.</small></p>-->
+    		
+    	</footer>
+    
+
+    
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write("<script src='js/libs/jquery-1.11.0.min.js'>\x3C/script>")</script>
+    
+    <!-- this is where we put our custom functions -->
+    <!-- don't forget to concatenate and minify if needed -->
+    <script src="js/functions.js"></script>  
+</body>
+</html>
