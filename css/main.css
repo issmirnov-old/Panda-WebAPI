@@ -86,6 +86,20 @@ nav ul li a {
     background: rgba(54, 185, 125, 0.89);
 }
 
+#service .card-title {
+    /*background: rgba(22, 174, 105, 0.89);*/
+    background: rgba(0, 185, 125, 0.89);
+}
+
+#status .card-title {
+    /*background: rgba(22, 174, 105, 0.89);*/
+    background: rgba(54, 0, 125, 0.89);
+}
+
+#script .card-title {
+    /*background: rgba(22, 174, 105, 0.89);*/
+    background: rgba(54, 185, 0, 0.89);
+}
 
 
 #cd-dropdown {

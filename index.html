@@ -11,6 +11,7 @@
     	
     	<!-- fonts -->
     	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     	
     	<!--  Mobile Viewport
     	http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
@@ -45,8 +46,8 @@
     				<!--<li><a href="/panda">PANDA</a></li>-->
     				<li>
         				<select id="cd-dropdown" class="cd-select"> <!-- source: http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/-->
-                            <option value="-1" selected>Select a Category</option>
-                            <option value="1" class="icon-monkey">Script</option>
+                            <option value="-1" selected> Select a Category</option>
+                            <option value="1" class="icon-monkey"> <i class="fa fa-wrench"></i> Script</option> <!--https://fortawesome.github.io/Font-Awesome/icons/-->
                             <option value="2" class="icon-bear">Service</option>
                             <option value="3" class="icon-squirrel">Status</option>
                         </select>
@@ -104,23 +105,23 @@
         		    <div class="card">
             		    <p class="card-title">Dokuwiki</p>   
             		    <p>info and link here</p> 
-                        <button type="button" class="paper-button bottom-right" onclick="getCalibreStatus()">Status</button>
-            		    <button type="button" class="paper-button bottom-left" onclick="postCalibreStart()">Add</button>
-            		    <button type="button" class="paper-button bottom-left-mid" onclick="postCalibreStop()">Commit</button>
-            		    <button type="button" class="paper-button bottom-right-mid" onclick="postCalibreRestart()">Push</button>
-            		     <button type="button" class="paper-button bottom-mid" onclick="postCalibreRestart()">Pull</button>
+                        <button type="button" class="paper-button bottom-right" onclick="getDokuwikiStatus()">Status</button>
+            		    <button type="button" class="paper-button bottom-left" onclick="postDokuwikiGitAdd()">Add</button>
+            		    <button type="button" class="paper-button bottom-left-mid" onclick="postDokuwikiCommit()">Commit</button>
+            		    <button type="button" class="paper-button bottom-right-mid" onclick="postDokuwikiPush()">Push</button>
+            		     <button type="button" class="paper-button bottom-mid" onclick="postDokuwikiPull()">Pull</button>
         		    </div>
         		    
         		     <div class="card">
             		    <p class="card-title">Backup /var/www</p>   
             		    <p>info and last backup time here</p> 
-            		    <button type="button" class="paper-button bottom-right" onclick="">Backup!</button>
+            		    <button type="button" class="paper-button bottom-right" onclick="postBackupVarWww()">Backup!</button>
         		    </div>
         		    
         		    <div class="card">
             		    <p class="card-title">Backup System</p>   
             		    <p>info and last backup time here</p> 
-            		    <button type="button" class="paper-button bottom-right" onclick="">Backup!</button>
+            		    <button type="button" class="paper-button bottom-right" onclick="postBackupSystem()">Backup!</button>
         		    </div>
         		
                 </div><!-- end script-->

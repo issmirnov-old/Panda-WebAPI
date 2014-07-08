@@ -1,0 +1,9 @@
+Ideas
+- stack the cards for space efficientcy - nah.
+- different colors for different categories
+- use dropdown to filter showing of 3 S divs.
+- mobile CSS
+- navbar - from bootstrap, mobile friendly?
+
+Refactoring
+- generalize API call, just pass in string path and REST type
