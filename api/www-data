@@ -1,0 +1,2 @@
+# copy of the sudoers file, for exec various cmd.
+www-data ALL=(vania) NOPASSWD: /storage/data1/Media/Books/calibre_servers.sh
