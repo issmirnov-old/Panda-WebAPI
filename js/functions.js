@@ -22,8 +22,9 @@
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             // some code..
             $("#container").width(ww);
+            $("#nav-container").width(ww); // hack
     		//$("#left").width(ww);
-    		$("#right").width(0);
+    		$("#right").hide();
         }
         
         

@@ -15,5 +15,14 @@ div.card {
 #right {
     float: left;
     overflow: hidden;
-    display: none;
+}
+
+
+#nav-container {
+    height: 40px;
+}
+
+nav ul li {
+    padding-left: 10px;
+    padding-right: 10px;
 }

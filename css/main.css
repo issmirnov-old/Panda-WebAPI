@@ -35,25 +35,40 @@ body {
 #header {
     background: #03a9f4;
     color: white;
-    height: 90px;
+    height: 40px;
     display: block;
-    padding: 10px 10px 10px 10px;
     box-shadow: 0px 3px rgba( 0, 0, 0, 0.1 );
     
 }
 
-nav ul li {
-    display: inline-block; /* block for vertical */
+#nav-container {
+    width: 800px;
+    margin: 0 auto;
+    height: 40px;
+}
 
-    background: rgba( 255, 255, 64, 0.5 );
+nav ul {
+    height: 100%;
+}
+
+nav ul li {
+    display: block; /* block for vertical */
+    float: left;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: large;
+    line-height: 40px;
 }
 
+nav ul li a:hover {
+    color: #e1e1e1;
+}
 
 #container {
     width: 80%;
