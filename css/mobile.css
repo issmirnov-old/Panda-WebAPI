@@ -1,0 +1,19 @@
+#drop-nav {
+    display: none;
+}
+
+
+div.card {
+	width: 300px;
+}
+
+#left {
+    float: left;
+}
+
+
+#right {
+    float: left;
+    overflow: hidden;
+    display: none;
+}

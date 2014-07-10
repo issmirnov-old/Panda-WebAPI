@@ -31,7 +31,8 @@
     	<link rel="stylesheet" href="css/style.css" />
     	<link rel="stylesheet" href="css/main.css" />
     	
-    	
+    	<!-- mobile -->
+    	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1280px)" href="css/mobile.css" />
     	
     
     </head>
@@ -43,15 +44,25 @@
     	<header id="header">
     		<nav>
     			<ul>
-    				<!--<li><a href="/panda">PANDA</a></li>-->
-    				<li>
-        				<select id="cd-dropdown" class="cd-select"> <!-- source: http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/-->
+    				<li><a href="/panda">PANDA</a></li>
+    				<li><a id="ahref-status" href="#">Status</a></li>
+    				<li><a id="ahref-service" href="#">Service</a></li>
+    				<li><a id="ahref-script" href="#">Script</a></li>
+    				
+    				
+    				<!-- source: http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/-->
+    				<!-- https://fortawesome.github.io/Font-Awesome/icons/-->
+
+    				<!--
+    				<li id="drop-nav">
+        				<select id="cd-dropdown" class="cd-select"> 
                             <option value="-1" selected> Select a Category</option>
-                            <option value="1" class="icon-monkey"> <i class="fa fa-wrench"></i> Script</option> <!--https://fortawesome.github.io/Font-Awesome/icons/-->
+                            <option value="1" class="icon-monkey"> <i class="fa fa-wrench"></i> Script</option>                             
                             <option value="2" class="icon-bear">Service</option>
                             <option value="3" class="icon-squirrel">Status</option>
                         </select>
-    				</li>
+    				</li>-->
+    				
     			</ul>
     		</nav>
     	</header>

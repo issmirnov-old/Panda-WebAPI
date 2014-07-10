@@ -43,7 +43,9 @@ body {
 }
 
 nav ul li {
-    display: block;
+    display: inline-block; /* block for vertical */
+
+    background: rgba( 255, 255, 64, 0.5 );
 }
 
 nav ul li a {

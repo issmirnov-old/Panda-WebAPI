@@ -17,8 +17,39 @@
 		$("#left").width(ww);
 		$("#right").width(ww);
 		
-	
-	});
+		
+		// detect mobile
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            // some code..
+            $("#container").width(ww);
+    		//$("#left").width(ww);
+    		$("#right").width(0);
+        }
+        
+        
+        // on click handlers for tabs
+        $('#ahref-status').click(function() {
+            console.log("status tab clicked");
+            $("#status").show();
+            $("#service").hide();
+            $("#script").hide();
+        });
+        
+        $('#ahref-service').click(function() {
+            console.log("service tab clicked");
+            $("#status").hide();
+            $("#service").show();
+            $("#script").hide();
+        });
+        
+        $('#ahref-script').click(function() {
+            console.log("script tab clicked");
+            $("#status").hide();
+            $("#service").hide();
+            $("#script").show();
+        });
+        
+    });
 	
 	
 	/* optional triggers
