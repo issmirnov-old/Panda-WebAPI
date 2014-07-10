@@ -20,11 +20,11 @@
 		
 		// detect mobile
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            // some code..
+            // change two column layout
             $("#container").width(ww);
-            $("#nav-container").width(ww); // hack
-    		//$("#left").width(ww);
+            $("#nav-container").width(ww);
     		$("#right").hide();
+    		
         }
         
         
@@ -70,11 +70,20 @@
 
 /* Creates two eqaul columns. */
 function init2col() {
+
+    // detect mobile
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	    $(".black_overlay").css('display', 'block');
+        $("#right").addClass('lightbox');
+		$("#right").show();
+		return;
+    }
+
+
     var ww = $(window).width();
     
-        $("#left").animate({
-        width: ww/2
-        
+    $("#left").animate({
+        width: ww/2  
     }, "easeIn");
     
     

@@ -1,6 +1,19 @@
 <!doctype html>
     
     <head>
+        <!-- mobile css hack 
+        <script>
+            $(function() {
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    // load mobile stylesheet
+            		var element = document.createElement('link');
+                    element.href = 'css/mobile.css';
+                    element.rel = 'stylesheet';
+                    element.type = 'text/css';
+                    document.head.appendChild(element);
+                }
+            });
+        </script>-->
     
     	<meta charset="utf-8">
     	<title>Panda</title>
@@ -32,12 +45,12 @@
     	<link rel="stylesheet" href="css/main.css" />
     	
     	<!-- mobile -->
-    	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1200px)" href="css/mobile.css" />
-    	
-    
+    	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1280px)" href="css/mobile.css" />
+    	    
     </head>
     
     <body>
+        <div class="black_overlay"></div> <!-- for mobile lightbox-->
     
 
     

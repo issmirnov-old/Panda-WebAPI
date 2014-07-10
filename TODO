@@ -3,12 +3,7 @@ Tasks
 
 
 Ideas
-- stack the cards for space efficientcy - nah.
-- different colors for different categories
-- use dropdown to filter showing of 3 S divs.
-- mobile CSS
-- navbar - from bootstrap, mobile friendly?
-
+- mobile slidein - popup? http://jsfiddle.net/b68Xb/ and http://meyerweb.com/eric/css/edge/popups/demo.html
 
 Refactoring
 - generalize API call, just pass in string path and REST type
