@@ -72,7 +72,8 @@ class Calibre {
     * @url GET /service/calibre/status
     */
 	function status() {
-        return shell_exec($this->SCRIPT . ' status');
+	    return "Not implemented yet.";
+        //return shell_exec($this->SCRIPT . ' status');
     }
 	
 }

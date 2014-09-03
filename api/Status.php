@@ -45,7 +45,7 @@ class Status {
     */
 	function md0() {
         $output = array();
-        exec('cat /tmp/md0_detail', $output); 
+        exec('cat /proc/mdstat', $output); 
 	    return json_encode($output);
 	}
 }
