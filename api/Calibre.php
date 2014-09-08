@@ -22,7 +22,7 @@ class Calibre {
     	    return json_encode($output);
 	    }
 		else {
-    		return "unsupported operation - use null arg for target.";
+    		return json_encode("unsupported operation - use null arg for target.");
 		}
 	}
 	
@@ -41,7 +41,7 @@ class Calibre {
     	    return json_encode($output);
 	    }
 	    else {
-    		return "unsupported operation - use null arg for target.";
+    		return json_encode("unsupported operation - use null arg for target.");
 		}
 	}
 	
@@ -60,7 +60,7 @@ class Calibre {
     	    return json_encode($output);
 	    }
 	    else {
-    		return "unsupported operation - use null arg for target.";
+    		return json_encode("unsupported operation - use null arg for target.");
 		}
 	}
 	
@@ -72,8 +72,9 @@ class Calibre {
     * @url GET /service/calibre/status
     */
 	function status() {
-	    return "Not implemented yet.";
-        //return shell_exec($this->SCRIPT . ' status');
+	    $output = array();
+	    exec($this->CMD_PREFIX . $this->SCRIPT . ' status', $output); 
+    	return json_encode($output);
     }
 	
 }

@@ -125,7 +125,7 @@ function updateSelection() {
             console.log("status");
             break;
     }
-    
+    $("#ajax-detailed-results").html(html);
 }
 
 
@@ -135,6 +135,11 @@ function updateSelection() {
 
 // =====    API work ====== // 
 var API_BASE_URL = 'http://puma/panda/api';
+
+// Clears result div
+function clearResult() {
+    $("#ajax-detailed-results").html("Loading...");
+}
 
 // Returns status of data1
 function getData1Status() {
@@ -177,6 +182,7 @@ function getMd0Status() {
 // === calibre === //
 
 function getCalibreStatus() {
+    clearResult();
     var data1StatusUrl = API_BASE_URL + '/service/calibre/status';
     $.ajax({url:data1StatusUrl, type:"GET", dataType:'json', success:function(result){
         //console.log(result);
@@ -195,6 +201,7 @@ function getCalibreStatus() {
 
 
 function postCalibreStart() {
+    clearResult();
     var data1StatusUrl = API_BASE_URL + '/service/calibre/start';
     $.ajax({url:data1StatusUrl, type:"POST", dataType:'json', success:function(result){
         //console.log(result);
@@ -212,6 +219,7 @@ function postCalibreStart() {
 }
 
 function postCalibreStop() {
+    clearResult();
     var data1StatusUrl = API_BASE_URL + '/service/calibre/stop';
     $.ajax({url:data1StatusUrl, type:"POST", dataType:'json', success:function(result){
         //console.log(result);
@@ -229,6 +237,7 @@ function postCalibreStop() {
 }
 
 function postCalibreRestart() {
+    clearResult();
     var data1StatusUrl = API_BASE_URL + '/service/calibre/restart';
     $.ajax({url:data1StatusUrl, type:"POST", dataType:'json', success:function(result){
         //console.log(result);
@@ -245,22 +254,6 @@ function postCalibreRestart() {
     init2col();
 }
 
-function postCalibreStart() {
-    var data1StatusUrl = API_BASE_URL + '/service/calibre/start';
-    $.ajax({url:data1StatusUrl, type:"POST", dataType:'json', success:function(result){
-        //console.log(result);
-        var parsed = JSON.parse(result);
-        var html = '';
-        for(var i = 0; i < parsed.length; i++)
-        {
-            html += parsed[i] + '<br>';
-        }
-        $("#ajax-detailed-results").html(html);
-    }});
-    
-    // perform animations
-    init2col();
-}
 
 // === end calibre == //
 
