@@ -1,7 +1,7 @@
 <?php
 class Dokuwiki {
     private $CMD_PREFIX = 'sudo -u vania ';
-    private $DOKUWIKI_DIR = '/var/www/dokuwiki';
+    private $DOKUWIKI_DIR = '/storage/data1/Personal/Projects/smirnov.wiki/smirnovwiki';
     
    /**
     * 
