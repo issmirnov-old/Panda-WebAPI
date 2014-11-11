@@ -98,10 +98,24 @@ nav ul li a:hover {
 }
 
 /* has results of ajax call.*/
+#info-card {
+    z-index: 3;
+}
+
 #info-card .card-title {
     /*background: rgba(22, 174, 105, 0.89);*/
     background: rgba(54, 185, 125, 0.89);
 }
+
+#ajax-detailed-results {
+    font-family: monospace;
+}
+
+#exit-button {
+    display: none; /* Hide on non mobile. */
+}
+
+
 
 #service .card-title {
     /*background: rgba(22, 174, 105, 0.89);*/

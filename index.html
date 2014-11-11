@@ -50,7 +50,7 @@
     </head>
     
     <body>
-        <div class="black_overlay"></div> <!-- for mobile lightbox-->
+        <div onclick="closeOverlay()" class="black_overlay"></div> <!-- for mobile lightbox-->
     
 
     
@@ -132,6 +132,8 @@
                         <button type="button" class="paper-button bottom-mid" onclick="postDokuwikiPull()">Pull</button>
         		    </div>
         		    
+        		    
+        		    <!--
         		     <div class="card">
             		    <p class="card-title">Backup /var/www</p>   
             		    <p>info and last backup time here</p> 
@@ -139,7 +141,7 @@
         		    </div>
         		    
         		    
-        		    <!--
+        		    
         		    <div class="card">
             		    <p class="card-title">Backup System</p>   
             		    <p>info and last backup time here</p> 
@@ -157,6 +159,7 @@
     		    <div class="card" id="info-card">
     		        <p class="card-title">Information</p>   
         		    <p id="ajax-detailed-results">Loading...</p> 
+        		    <button type="button" id="exit-button" onclick="closeInformation()">X</button>
                 </div>
     		</section>
     	

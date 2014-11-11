@@ -22,9 +22,16 @@ div.card {
 
 #info-card {
     padding: 0;
-    margin: 0;
 }
 
+#exit-button {
+    top: 5px;
+    right: 5px; 
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    
+}
 
 #nav-container {
     height: 40px;

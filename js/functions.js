@@ -97,11 +97,21 @@ function init2col() {
 }
 
 
+/* Close black overlay on mobile when tapped. */
+function closeOverlay() {
+    $(".black_overlay").css('display', 'none');
+    $("#right").removeClass('lightbox');
+    $("#right").hide();
+}
+
+
 /* Expands left column to full size. */
 function expandLeft() {
     $("#left").width('100%');
     $("#right").width('0%');
 }
+
+
 
 /* referenced in js/jquery.dropdown.js 
  * Do not rename w/o refactor
@@ -376,7 +386,6 @@ function postBackupSystem() {
 }
 
 // === end backup == //
-
 
 
 
