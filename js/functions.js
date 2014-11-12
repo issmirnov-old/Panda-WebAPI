@@ -385,6 +385,25 @@ function postBackupSystem() {
     init2col();
 }
 
+
+function viewDataMirrorLog() {
+    //console.log("printing data mirror");
+    var data1StatusUrl = API_BASE_URL + '/script/backup/viewdatalog';
+    $.ajax({url:data1StatusUrl, type:"GET", dataType:'json', success:function(result){
+        //console.log(result);
+        var parsed = JSON.parse(result);
+        var html = '';
+        for(var i = 0; i < parsed.length; i++)
+        {
+            html += parsed[i] + '<br>';
+        }
+        $("#ajax-detailed-results").html(html);
+    }});
+    
+    // perform animations
+    init2col();
+}
+
 // === end backup == //
 
 

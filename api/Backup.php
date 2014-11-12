@@ -29,7 +29,7 @@ class Backup {
     * 
     * @url POST /script/backup/system
     */
-	function system() {
+	function backup_system() {
 	    // get name of backup
 	    $NAME = date("Y-m-d") . '.tgz';
 	    
@@ -39,5 +39,18 @@ class Backup {
 	    return json_encode($output);
 	}
 	
+	
+    /**
+    * 
+    * Check status of rsync mirror to external hard drive.
+    * 
+    * @url GET /script/backup/viewdatalog
+    */
+	function datamirrorlog() {
+	    // Perform script.
+        $output = array();
+        exec('tail -n 50 /tmp/mybook_mirror', $output); 
+	    return json_encode($output);
+	}
 }
 ?>
