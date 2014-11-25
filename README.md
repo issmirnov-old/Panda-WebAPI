@@ -11,13 +11,17 @@ Google's material design.
 
 ### Screenshot
 
-![screenshot]()
 
-In the screenshot above you can see:
+![Landing Page](/content/images/2014/11/Image-2014-11-24-at-16-28-13-1.png)
 
-* The API explorer
-* blah 2
-* blah 3
+Raid Status Output:
+![Raid Status](/content/images/2014/11/Image-2014-11-24-at-16-28-37.png)
+
+Calibre Libraries:
+![Calibre Libraries](/content/images/2014/11/Image-2014-11-24-at-16-29-06.png)
+
+
+
 
 
 ### Installation
@@ -42,13 +46,7 @@ Yes, although the floater is still ugly.
 Bad, still figuring out sudoers, root rights, and proxy scripts.
 
 
-#### License
-
-`project-name-here` is licensed with XXX. Full license text is
-available on COPYING file.
-
 #### Contributors
 
-Vania Smirnov
-
-Using: Restler API
+- Ivan Smirnov
+- API Engine: [Restler]()
