@@ -10,6 +10,7 @@
     $r->addAPIClass('Dokuwiki', '');
     $r->addAPIClass('Backup', '');
     $r->addAPIClass('Status', '');
+    $r->addAPIClass('Music', '');
 
     $r->handle();
         
