@@ -49,7 +49,7 @@ class Music {
     *
     * @url POST /script/music/pause
     */
-	function prevSong($request_data) {
+	function pause($request_data) {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' pause ' , $output);
 	    return json_encode($output);
@@ -62,15 +62,48 @@ class Music {
     *
     * @url POST /script/music/resume
     */
-	function prevSong($request_data) {
+	function resume($request_data) {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' resume ' , $output);
 	    return json_encode($output);
 	}
 	
+	 /**
+    * 
+    * Volume up
+    *
+    * @url POST /script/music/volume_up
+    */
+	function volumeUp($request_data) {
+        $output = array();
+	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume up ' , $output);
+	    return json_encode($output);
+	}
 	
-
-	// TODO - add volume controls.
+	 /**
+    * 
+    * Volume down
+    *
+    * @url POST /script/music/volume_down
+    */
+	function volumeDown($request_data) {
+        $output = array();
+	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume down ' , $output);
+	    return json_encode($output);
+	}
+	
+   /**
+    * 
+    * Set volume to some percent
+    *
+    * @url POST /script/music/volume_set
+    */
+	function volumeSet($request_data) {
+        $output = array();
+        $value = $request_data['value'];
+	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume set ' . $value , $output);
+	    return json_encode($output);
+	}
 
 }
 ?>
