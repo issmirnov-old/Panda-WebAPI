@@ -263,3 +263,24 @@ function viewDataMirrorLog() {
 // === end backup == //
 
 
+// === music control == //
+function playSong() {
+    //console.log("printing data mirror");
+    var musicUrl = API_BASE_URL + '/script/music/play_song'; // + name of song or query
+    $.ajax({url:musicUrl, type:"GET", dataType:'json', success:function(result){
+        //console.log(result);
+        var parsed = JSON.parse(result);
+        var html = '';
+        for(var i = 0; i < parsed.length; i++)
+        {
+            html += parsed[i] + '<br>';
+        }
+        $("#ajax-detailed-results").html(html);
+    }});
+    
+    // perform animations
+    init2col();
+}
+
+
+// === end music control == //
