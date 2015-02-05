@@ -5,6 +5,11 @@ class Music {
     private $MUSIC_SCRIPT = '/home/vania/bin/carbon-control/music.sh';
     	
 	
+	
+	
+	
+	
+	
    /**
     * 
     * Launches a song on carbon.
@@ -103,6 +108,17 @@ class Music {
         $value = $request_data['value'];
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume set ' . $value , $output);
 	    return json_encode($output);
+	}
+	
+	
+	/**
+    * 
+    * Connection test endpoint. Used to determine connectivity in Android Wear app.
+    *
+    * @url GET /health
+    */
+	function health() {
+	    return "OK";
 	}
 
 }
