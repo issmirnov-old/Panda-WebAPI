@@ -48,6 +48,9 @@
             $("#script").show();
         });
         
+        // check if puma not reachable (usually due to DNS issues)
+        healthCheck();
+        
     });
 	
 	

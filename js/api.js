@@ -7,6 +7,18 @@ function clearResult() {
     $("#ajax-detailed-results").html("Loading...");
 }
 
+/* Health check on panda api. */
+function healthCheck() {
+    $.ajax({url:API_BASE_URL + '/health', type:"GET", dataType:'text', success:function(result){
+        console.log("panda health: " + result);
+        if (result != '"OK"') {
+	        alert("Warning: Panda API health check failed!!");
+        }
+    }});
+
+}
+
+
 // Returns status of data1
 function getData1Status() {
     var data1StatusUrl = API_BASE_URL + '/status/data1';
