@@ -7,6 +7,20 @@ class Calibre {
     private $CMD_PREFIX = 'sudo -u vania ';
     private $SCRIPT = '/storage/data1/Media/Books/calibre_servers.sh';
     
+    
+    
+     /**
+    * 
+    * Starts calibre-server daemon.
+    * 
+    * @url GET /whoami
+    */
+	function whoami(array $target = NULL) {
+        $output = array();
+        exec('whoami', $output); 
+	    return json_encode($output);
+	}
+	
    /**
     * 
     * Starts calibre-server daemon.

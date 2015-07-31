@@ -110,6 +110,29 @@ class Music {
 	    return json_encode($output);
 	}
 	
+	/**
+    * 
+    * Play random song from top rated
+    *
+    * @url POST /script/music/top_rated
+    */
+	function topRated() {
+        $output = array();
+	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' toprated' , $output);
+	    return json_encode($output);
+	}
+	
+	/**
+    * 
+    * Play random song from frequently played.
+    *
+    * @url POST /script/music/most_played
+    */
+	function mostPlayed() {
+        $output = array();
+	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' mostplayed' , $output);
+	    return json_encode($output);
+	}
 	
 	/**
     * 
