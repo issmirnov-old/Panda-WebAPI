@@ -17,7 +17,7 @@ class Music {
     * @url POST /script/music/play_song
     */
 	function playSong($request_data) {
-	    $query = $request_data['query'];
+	    $query = $request_data['data'];
         $output = array();
 	    //exec($this->CMD_PREFIX . $this->SCRIPT_DIR . 'play_song.sh ' . $query , $output);
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' play ' . $query , $output);
@@ -30,7 +30,7 @@ class Music {
     *
     * @url POST /script/music/next_song
     */
-	function nextSong($request_data) {
+	function nextSong() {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' next' , $output);
 	    return json_encode($output);
@@ -42,7 +42,7 @@ class Music {
     *
     * @url POST /script/music/prev_song
     */
-	function prevSong($request_data) {
+	function prevSong() {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' prev ' , $output);
 	    return json_encode($output);
@@ -54,7 +54,7 @@ class Music {
     *
     * @url POST /script/music/pause
     */
-	function pause($request_data) {
+	function pause() {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' pause ' , $output);
 	    return json_encode($output);
@@ -67,7 +67,7 @@ class Music {
     *
     * @url POST /script/music/resume
     */
-	function resume($request_data) {
+	function resume() {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' resume ' , $output);
 	    return json_encode($output);
@@ -79,7 +79,7 @@ class Music {
     *
     * @url POST /script/music/volume_up
     */
-	function volumeUp($request_data) {
+	function volumeUp() {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume up ' , $output);
 	    return json_encode($output);
@@ -91,7 +91,7 @@ class Music {
     *
     * @url POST /script/music/volume_down
     */
-	function volumeDown($request_data) {
+	function volumeDown() {
         $output = array();
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume down ' , $output);
 	    return json_encode($output);
@@ -105,7 +105,7 @@ class Music {
     */
 	function volumeSet($request_data) {
         $output = array();
-        $value = $request_data['value'];
+        $value = $request_data['data'];
 	    exec($this->CMD_PREFIX . $this->MUSIC_SCRIPT . ' volume set ' . $value , $output);
 	    return json_encode($output);
 	}
