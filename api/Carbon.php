@@ -14,5 +14,18 @@ class Carbon {
 	    exec($this->CMD_PREFIX . $this->SCRIPT . ' day_summary ' , $output);
 	    return json_encode($output);
 	}
+	
+	/**
+    * 
+    * Locks computer screen on carbon.
+    *
+    * @url POST /script/carbon/lock
+    */
+	function lockCarbon() {
+        $output = array();
+	    exec($this->CMD_PREFIX . $this->SCRIPT . ' lockscreen ' , $output);
+	    return json_encode($output);
+	}
+	
 }
 ?>

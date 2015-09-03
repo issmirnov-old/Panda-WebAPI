@@ -4,8 +4,8 @@
  *   
 */
 class Calibre {
-    private $CMD_PREFIX = 'sudo -u vania ';
-    private $SCRIPT = '/storage/data1/Media/Books/calibre_servers.sh';
+    private $CMD_PREFIX = 'sudo ';
+    private $SCRIPT = '/usr/bin/service calibre-libs';
     
     
     
